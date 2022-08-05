@@ -5,7 +5,7 @@ SOLID Async API for online cinema with no registration.
 ## What is in it:
 
 1. SOLID async API to get data about movies, genres, persons
-2. Covering tests with pytests
+2. Covering tests with pytest
 3. Added API requests check. Valid JWT-token from Auth-servce is needed.
 4. Added graceful degradation: JWT-tokens' ttl to be increased by MAX_ADDITIONAL_TIME to let Auth service recover.
 
