@@ -1,9 +1,27 @@
-# Проектная работа 5 спринта
+## What is it:
 
-В папке **tasks** ваша команда найдёт задачи, которые необходимо выполнить во втором спринте модуля "Сервис Async API".
+SOLID Async API for online cinema with no registration.  
 
-Как и в прошлом спринте, мы оценили задачи в стори поинтах.
+## What is in it:
 
-Вы можете разбить эти задачи на более маленькие, например, распределять между участниками команды не большие куски задания, а маленькие подзадачи. В таком случае не забудьте зафиксировать изменения в issues в репозитории.
+1. SOLID async API to get data about movies, genres, persons
+2. Covering tests with pytests
+3. Added API requests check. Valid JWT-token from Auth-servce is needed.
+4. Added graceful degradation: JWT-tokens' ttl to be increased by MAX_ADDITIONAL_TIME to let Auth service recover.
 
-**От каждого разработчика ожидается выполнение минимум 40% от общего числа стори поинтов в спринте.**
+## How to start:
+
+docker-compose up -d --build 
+(You may need data in Elasticsearch to see how it works)
+
+## Documentation:
+
+http://0.0.0.0:8000/api/openapi
+
+## How to test:
+
+docker-compose -f docker-compose.yml -f docker-compose.tests.yml up --build
+
+## Stack:
+
+Async FastAPI, Elasticsearch, Docker Compose, Redis, Nginx, pytest
